@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        #para{
+            position: relative;
+            margin-top: 100px;
+        }
+        #inside{
+            position: absolute;
+            background-color:purple;
+            border-radius: 50%;
+        }
+    </style>
+    <title>Title of the document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div>
+        Amination
+    </div>
+
+    <div>
+        <button id="amination">Start Amination</button>
+        <button id="stop">Stop Amination</button>
+    </div>
+
+    <div id="para">
+        <div id="inside">
+            <p>We are learning Jquarry</p>
+        </div>
+    </div>
+
+    <script>
+
+        function callback(){
+            alert("amimation stop");
+        }
+
+        $('document').ready(function(){
+            $('#amination').click(function(){
+                $('#inside').animate({
+                    left:'300px',
+                    opacity:'0.5',
+                    height:'200px',
+                    width:'200px',
+                },3000,function(){
+                    callback();
+                });
+            });
+
+            $('#stop').click(function(){
+                $('#inside').stop();
+            })
+        });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        #para{
+            position: relative;
+            margin-top: 100px;
+        }
+        #inside{
+            position: absolute;
+            background-color:purple;
+            border-radius: 50%;
+        }
+    </style>
+    <title>Title of the document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div>
+        chaning
+    </div>
+
+    <div>
+        <button id="chain">click here</button>
+    </div>
+
+    <div id="para">
+        <div id="inside">
+            <p>We are learning Jquarry</p>
+        </div>
+    </div>
+
+    <script>
+        $('document').ready(function(){
+            $('#chain').click(function(){
+                $('#inside').css('background','blue').slideUp(3000).slideDown(3000);            
+            })
+        });
+    </script>
+
+  </body>
+</html>
