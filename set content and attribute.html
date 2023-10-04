@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div>set content and Attribute</div>
+
+    <div id="para">
+        <p id="line1"><strong>Department</strong></p>
+        <p id="line2"><strong>Skill</strong></p>
+    </div>
+
+    <div>
+        name:<input type="text" id="getname" placeholder="name will be here..."/>
+    </div>
+
+    <div>
+        <button id="name">Show Name</button>
+        <button id="dep">Show Department</button>
+        <button id="skill">Show Skill</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#name').click(function(){
+                $("#getname").val('nishi');
+            })
+
+            $('#dep').click(function(){
+                $('#line1').text('CSE');
+            })
+
+            $('#skill').click(function(){
+                $('#line2').text('jani na');
+            })
+        });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div>get content and Attribute</div>
+
+    <div id="para">
+        <p id="line">Training with live <strong>Training</strong></p>
+        <p id="line2">We are leaning Jquary</p>
+    </div>
+
+    <div>
+        name:<input type="text" id="name" value="nishi"/>
+    </div>
+
+    <div>
+        <button id="show">Show Text</button>
+        <button id="source">Show HTML</button>
+        <button id="value">Show value</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#show').click(function(){
+                alert('the text is'+$("#line2").text());
+            })
+
+            $('#source').click(function(){
+                alert('the html is'+$("#line").html());
+            })
+
+            $('#value').click(function(){
+                alert('the value is'+$('#name').val());
+            })
+        });
+    </script>
+
+  </body>
+</html>

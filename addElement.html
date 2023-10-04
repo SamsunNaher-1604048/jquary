@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div>Add Elenent</div>
+    <p>training with live project</p>
+
+    <div id="para">
+        <p id="subPara1">Nishi is doing </p>
+        <p id="subPara2">is doing codeing</p>
+        <p id="subPara3">naher</p>
+    </div>
+
+    <button id="append">Append</button>
+    <button id="prepand">prepand</button>
+    <button id="after">after</button>
+    <button id="before">before</button>
+
+    <script>
+        $(document).ready(function(){
+            $('#append').click(function(){
+               $('#subPara1').append('codeing');
+            })
+
+            $('#prepand').click(function(){
+                $('#subPara2').prepend('nishi ');
+            })
+
+            $("#after").click(function(){
+                $('#subPara3').after('nishi');
+            })
+
+            $('#before').click(function(){
+                $('#subPara3').before('samsun');
+            })
+        })
+    </script>
+  </body>
+</html>
