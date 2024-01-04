@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        .para{
+            background-color: gray;
+            padding: 30px;
+            margin: 30px;
+            width: 300px;
+            text-align: center;
+            border: 10px solid black;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+
+    <p>training with live project</p>
+    <p class="para">Jquarry add dimaentation</p>
+    <p id="info"></p>
+    <div>
+        <button id="find_dia">Find dimaentation</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+           $("#find_dia").click(function(){
+            var val = " ";
+            val +="width:"+$(".para").width()+"</br>";
+            val +="height"+$(".para").height()+"</br>";
+            val +="inner height"+$(".para").innerHeight()+"</br>";
+            val +="inner width"+$(".para").innerWidth()+"</br>";
+            val +="outer height with border"+$(".para").outerHeight()+"</br>";
+            val +="outer width with border"+$(".para").outerWidth()+"</br>";
+            val +="outer height with margin"+$(".para").outerHeight(true)+"</br>";
+            val +="outer width with margin"+$(".para").outerWidth(true)+"</br>";
+            $("#info").html(val);
+           })
+        })
+    </script>
+
+  </body>
+</html>

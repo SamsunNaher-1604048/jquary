@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> we are learning jquery</h1>
+        <h2>Conditional Logic</h2>
+    </div>
+
+    <div class="para">
+        <form id="myFrom">
+            <table>
+                <tr>
+                    <td>Frist Name:</td>
+                    <td><input type="text" id="required"></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Email Address:</td>
+                    <td><input type="text" id="required"></td>
+                </tr>
+                <tr>
+                    <td>website:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="submit">submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var isValid = true;
+            $('#submit').click(function(e){
+                e.preventDefault()
+                $('input[type ="text"]#required').each(function(){
+
+                    if(($(this).val()) == ""){
+                        $(this).css({
+                            "background":"red"
+                        })
+                        isValid = false;
+                    }
+                })
+                if(isValid == true){
+                    clear();
+                }
+            })
+        });
+        function clear(){
+            $("#myFrom :input").each(function(){
+                 $(this).val("");
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>training with live project</p>
+    <p id="para">Add CSS Class Part 2</p>
+    <div>
+        <button id="add_css">Add CSS</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#add_css").click(function(){
+               $("#para").css({
+                color:"white",
+                "background-color":"black",
+                width:"300px",
+                padding:'10px',
+
+               })
+            })
+        })
+    </script>
+
+  </body>
+</html>

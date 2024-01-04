@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>training with live project</p>
+    <p>jquary ajax() post mothod</p>
+
+    <div>
+        <div id="state">
+
+        </div>
+
+        <form id="myFrom">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input name="name" type="text" required="1"></td>
+                </tr>
+                <tr>
+                    <td>Skill:</td>
+                    <td><input name="skill" type="text" required="1"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <!-- <td><button id="btn" type="submit">submit</button></td> -->
+                    <td><input type="submit" value="submit"></td>
+                </tr>
+                
+            </table>
+        </form>
+    </div>
+
+    <script>
+        // $(document).ready(function(){
+        //     // $("#myFrom").submit(function(){
+        //     //     console.log('hello');
+        //     // });
+        //     $("#myFrom").submit(function(){
+        //      $.post("connection.php",{"name":"nishi"},function(data){
+        //           $("#state").html('data');
+        //       })
+
+        //         return false;
+        //     })
+
+        //     // $("#btn").click(function(){
+        //     //     $.post("connection.php",{"name":"nishi"},function(data){
+        //     //         $("#state").html('data');
+        //     //     })
+        //     // })
+        // });
+
+        $(document).ready(function() {
+            $("#myFrom").submit(function() {
+                $.post("connection.php", {"name":"Delowar", "skill":"php"}, function (data) {
+                    console.log('hello');
+                   $("#state").html (data);
+                });
+            });
+        });
+    </script>
+  </body>
+</html>

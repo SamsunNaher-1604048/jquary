@@ -4,10 +4,48 @@
     <title>Title of the document</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+      .para{
+         color: red;
+         border: 1px solid black;
+         width: 200px;
+         border-radius: 5px;
+         padding: 10px;
+         float: right;
+      }
+
+      .bg{
+        color: white;
+        background-color: black;
+      }
+    </style>
   </head>
   <body>
     <div>CSS Classes</div>
     <p>training with live project</p>
-    
+
+    <div>
+      <button id="style">Add Style</button>
+      <button id="remove">Remove Style</button>
+      <button id="remove_all_class">Remove all Class</button>
+    </div>
+
+    <script>
+      $(document).ready(function(){
+
+        $("#style").click(function(){
+          $("p").addClass("para bg");
+        })
+
+        $('#remove').click(function(){
+          $('p').removeClass('bg');
+        })
+
+        $("#remove_all_class").click(function(){
+          $('p').removeClass('bg para');
+        })
+
+      })
+    </script>
   </body>
 </html>

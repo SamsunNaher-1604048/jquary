@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div>XML With Jquarry</div>
+    <p>training with live project</p>
+    <div>
+        <ul>
+
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+        })
+
+        function nishiClass(){           
+             $.ajax({
+                url:"one.xml",
+                dataType:"xml",
+                success:function(data){
+                    $('ul').children().remove();
+                    $(data).find('employee').each(function(){
+                        var alldata = 
+
+                    })
+                }
+            });
+
+        }
+    </script>
+
+  </body>
+</html>
